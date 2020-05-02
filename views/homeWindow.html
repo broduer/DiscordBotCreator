@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Discord Bot Creator</title>
+</head>
+
+<body>
+    <div class="container">
+        <p class="introHeader">Discord Bot Makers</p>
+        <p class="introText">Create your own custom Discord bot!</p>
+    </div>
+    <div class="actionButton">
+        <button class="actionButtonNav">Open Project</button>
+        <button class="actionButtonNav" onclick="newProject()">New Project</button>
+    </div>
+
+    <script>
+        const electron = require('electron');
+        const {
+            ipcRenderer
+        } = electron;
+
+        function newProject() {
+            ipcRenderer.send("home:newProject");
+        }
+    </script>
+</body>
+
+</html>

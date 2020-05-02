@@ -1,0 +1,30 @@
+[{
+    "name": "test",
+    "perms": "BotOwner",
+    "actions": [{
+            "name": "Send Message",
+            "data": {
+                "sendTo": "messageAuthor",
+                "message": "This is a test command!"
+            }
+        },
+        {
+            "name": "Send Message",
+            "data": {
+                "sendTo": "sameChannel",
+                "message": "Message sent to your DM's!"
+            }
+        }
+    ]
+},{
+    "name": "nub",
+    "perms": "BotOwner",
+    "actions": [{
+            "name": "Send Message",
+            "data": {
+                "sendTo": "sameChannel",
+                "message": "your moms a hoe!"
+            }
+        }
+    ]
+}]

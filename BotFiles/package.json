@@ -1,0 +1,15 @@
+{
+  "name": "discord-bot-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "dev": "nodemon bot.js"
+  },
+  "author": "Great Plains Modding",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.0.2",
+    "nodemon": "^2.0.2"
+  }
+}

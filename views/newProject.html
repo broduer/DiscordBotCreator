@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Creator</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body class="newProjectBody">
+    <div class="newProjectFields">
+        <label>Project Name:</label><br>
+        <input type="text" placeholder="My New Project" required><br><br>
+
+        <label>Bot Prefix:</label><br>
+        <input type="text" placeholder="!" required><br><br>
+
+        <label>Bot Token:</label><br>
+        <input type="text" placeholder="" required><br><br>
+
+        <label>Project Location:</label><br>
+        <input type="text" placeholder="My New Project" style="width: 77.5%;" required>
+        <button class="locationButton">Change</button><br><br>
+        <center>
+            <button class="newProjectButton" onclick="createProject()">Create Project</button>
+        </center>
+    </div>
+
+    <script>
+        const electron = require('electron');
+        const {
+            ipcRenderer
+        } = electron;
+
+        function createProject() {
+            ipcRenderer.send("newProject:createProject");
+        }
+    </script>
+</body>
+
+</html>
